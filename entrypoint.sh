@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # If we're started as PID 1, we should wrap command execution through tini to
-# prevent leakage of orphaned processes ("zombies").
+# prevent leakage of orphaned processes ("zombies"). okey
 if test "$$" = "1"; then
 	exec tini -- $@
 else
